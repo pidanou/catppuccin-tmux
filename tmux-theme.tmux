@@ -54,7 +54,7 @@ main() {
     if [ -n "$theme" ]; then
       tmux_echo "tmux_theme warning: \\\"@tmux_theme_flavour\\\" has been deprecated use \\\"@tmux_theme_flavor\\\"" 103
     else
-      theme="mocha"
+      theme="catpuccin_mocha"
     fi
   fi
 
