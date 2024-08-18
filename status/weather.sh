@@ -7,9 +7,9 @@ show_weather() {
   run_tmux_batch_commands
 
   index=$1
-  icon="$(get_tmux_batch_option "@catppuccin_weather_icon" "")"
-  color="$(get_tmux_batch_option "@catppuccin_weather_color" "$thm_yellow")"
-  text="$(get_tmux_batch_option "@catppuccin_weather_text" "#{weather}")"
+  icon="$(get_tmux_batch_option "@tmux_theme_weather_icon" "")"
+  color="$(get_tmux_batch_option "@tmux_theme_weather_color" "$thm_yellow")"
+  text="$(get_tmux_batch_option "@tmux_theme_weather_text" "#{weather}")"
 
   module=$(build_status_module "$index" "$icon" "$color" "$text")
 

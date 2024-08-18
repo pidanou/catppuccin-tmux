@@ -7,9 +7,9 @@ show_gitmux() {
   run_tmux_batch_commands
 
   index=$1
-  icon="$(get_tmux_batch_option "@catppuccin_gitmux_icon"  "󰊢")"
-  color="$(get_tmux_batch_option "@catppuccin_gitmux_color" "$thm_green")"
-  text="$(get_tmux_batch_option "@catppuccin_gitmux_text"  "#(gitmux \"#{pane_current_path}\")")"
+  icon="$(get_tmux_batch_option "@tmux_theme_gitmux_icon"  "󰊢")"
+  color="$(get_tmux_batch_option "@tmux_theme_gitmux_color" "$thm_green")"
+  text="$(get_tmux_batch_option "@tmux_theme_gitmux_text"  "#(gitmux \"#{pane_current_path}\")")"
 
   module=$( build_status_module "$index" "$icon" "$color" "$text" )
 

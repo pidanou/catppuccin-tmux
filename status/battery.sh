@@ -20,9 +20,9 @@ show_battery() {
   run_tmux_batch_commands
 
   index=$1
-  icon=$(get_tmux_batch_option "@catppuccin_battery_icon" "#{battery_icon}")
-  color=$(get_tmux_batch_option "@catppuccin_battery_color" "$thm_yellow")
-  text=$(get_tmux_batch_option "@catppuccin_battery_text" "#{battery_percentage}")
+  icon=$(get_tmux_batch_option "@tmux_theme_battery_icon" "#{battery_icon}")
+  color=$(get_tmux_batch_option "@tmux_theme_battery_color" "$thm_yellow")
+  text=$(get_tmux_batch_option "@tmux_theme_battery_text" "#{battery_percentage}")
 
   module=$(build_status_module "$index" "$icon" "$color" "$text")
 

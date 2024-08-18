@@ -6,9 +6,9 @@ show_clima() {
   run_tmux_batch_commands
 
   index=$1
-  icon="$(get_tmux_batch_option "@catppuccin_clima_icon" "")"
-  color="$(get_tmux_batch_option "@catppuccin_clima_color" "$thm_yellow")"
-  text="$(get_tmux_batch_option "@catppuccin_clima_text" "#{clima}")"
+  icon="$(get_tmux_batch_option "@tmux_theme_clima_icon" "")"
+  color="$(get_tmux_batch_option "@tmux_theme_clima_color" "$thm_yellow")"
+  text="$(get_tmux_batch_option "@tmux_theme_clima_text" "#{clima}")"
 
   module=$(build_status_module "$index" "$icon" "$color" "$text")
 

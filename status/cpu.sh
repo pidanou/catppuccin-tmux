@@ -10,9 +10,9 @@ show_cpu() {
   run_tmux_batch_commands
 
   index=$1
-  icon=$(get_tmux_batch_option "@catppuccin_cpu_icon" "")
-  color="$(get_tmux_batch_option "@catppuccin_cpu_color" "#{cpu_bg_color}")"
-  text="$(get_tmux_batch_option "@catppuccin_cpu_text" "#{cpu_percentage}")"
+  icon=$(get_tmux_batch_option "@tmux_theme_cpu_icon" "")
+  color="$(get_tmux_batch_option "@tmux_theme_cpu_color" "#{cpu_bg_color}")"
+  text="$(get_tmux_batch_option "@tmux_theme_cpu_text" "#{cpu_percentage}")"
 
   module=$(build_status_module "$index" "$icon" "$color" "$text")
 

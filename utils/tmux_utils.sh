@@ -145,7 +145,7 @@ tmux_batch_setup_status_module() {
   # shellcheck disable=SC2034
   tmux_batch_options=()
 
-  add_tmux_batch_option "@catppuccin_${name}_icon"
-  add_tmux_batch_option "@catppuccin_${name}_color"
-  add_tmux_batch_option "@catppuccin_${name}_text"
+  add_tmux_batch_option "@tmux_theme_${name}_icon"
+  add_tmux_batch_option "@tmux_theme_${name}_color"
+  add_tmux_batch_option "@tmux_theme_${name}_text"
 }

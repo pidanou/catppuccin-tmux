@@ -11,16 +11,16 @@ build_window_format() {
   local fill="$5"
 
   # NOTE: For backwards compatibility remove before 1.0.0 and update default for
-  # `@catppuccin_window_status`
+  # `@tmux_theme_window_status`
   if [ "$window_status" = "no" ]; then
-    window_status_enable="$(get_tmux_option "@catppuccin_window_status_enable" "")"
+    window_status_enable="$(get_tmux_option "@tmux_theme_window_status_enable" "")"
 
     if [ -n "$window_status_enable" ]; then
-      tmux_echo "catppuccin warning: \\\"@catppuccin_window_status_enable\\\" and \\\"@catppuccin_window_status_icon_enable\\\" has been replaced by\n\t \
-        \\\"@catppuccin_window_status\\\" with the options \\\"no\\\", \\\"icon\\\" and \\\"text\\\"" 104
+      tmux_echo "tmux_theme warning: \\\"@tmux_theme_window_status_enable\\\" and \\\"@tmux_theme_window_status_icon_enable\\\" has been replaced by\n\t \
+        \\\"@tmux_theme_window_status\\\" with the options \\\"no\\\", \\\"icon\\\" and \\\"text\\\"" 104
 
       if [ "$window_status_enable" = "yes" ]; then
-        window_status_icon_enable="$(get_tmux_option "@catppuccin_window_status_icon_enable" "yes")"
+        window_status_icon_enable="$(get_tmux_option "@tmux_theme_window_status_icon_enable" "yes")"
         if [ "$window_status_icon_enable" = "yes" ]; then
           window_status="icon"
         else
@@ -138,23 +138,23 @@ build_window_icon() {
     # shellcheck disable=SC2034
     local tmux_batch_options=()
 
-    add_tmux_batch_option "@catppuccin_icon_window_last"
-    add_tmux_batch_option "@catppuccin_icon_window_current"
-    add_tmux_batch_option "@catppuccin_icon_window_zoom"
-    add_tmux_batch_option "@catppuccin_icon_window_mark"
-    add_tmux_batch_option "@catppuccin_icon_window_silent"
-    add_tmux_batch_option "@catppuccin_icon_window_activity"
-    add_tmux_batch_option "@catppuccin_icon_window_bell"
+    add_tmux_batch_option "@tmux_theme_icon_window_last"
+    add_tmux_batch_option "@tmux_theme_icon_window_current"
+    add_tmux_batch_option "@tmux_theme_icon_window_zoom"
+    add_tmux_batch_option "@tmux_theme_icon_window_mark"
+    add_tmux_batch_option "@tmux_theme_icon_window_silent"
+    add_tmux_batch_option "@tmux_theme_icon_window_activity"
+    add_tmux_batch_option "@tmux_theme_icon_window_bell"
 
     run_tmux_batch_commands
 
-    custom_icon_window_last=$(get_tmux_batch_option "@catppuccin_icon_window_last" "󰖰")
-    custom_icon_window_current=$(get_tmux_batch_option "@catppuccin_icon_window_current" "󰖯")
-    custom_icon_window_zoom=$(get_tmux_batch_option "@catppuccin_icon_window_zoom" "󰁌")
-    custom_icon_window_mark=$(get_tmux_batch_option "@catppuccin_icon_window_mark" "󰃀")
-    custom_icon_window_silent=$(get_tmux_batch_option "@catppuccin_icon_window_silent" "󰂛")
-    custom_icon_window_activity=$(get_tmux_batch_option "@catppuccin_icon_window_activity" "󱅫")
-    custom_icon_window_bell=$(get_tmux_batch_option "@catppuccin_icon_window_bell" "󰂞")
+    custom_icon_window_last=$(get_tmux_batch_option "@tmux_theme_icon_window_last" "󰖰")
+    custom_icon_window_current=$(get_tmux_batch_option "@tmux_theme_icon_window_current" "󰖯")
+    custom_icon_window_zoom=$(get_tmux_batch_option "@tmux_theme_icon_window_zoom" "󰁌")
+    custom_icon_window_mark=$(get_tmux_batch_option "@tmux_theme_icon_window_mark" "󰃀")
+    custom_icon_window_silent=$(get_tmux_batch_option "@tmux_theme_icon_window_silent" "󰂛")
+    custom_icon_window_activity=$(get_tmux_batch_option "@tmux_theme_icon_window_activity" "󱅫")
+    custom_icon_window_bell=$(get_tmux_batch_option "@tmux_theme_icon_window_bell" "󰂞")
 
     if [ "$window_status" = "icon" ]; then
       # icon order: #!~[*-]MZ
